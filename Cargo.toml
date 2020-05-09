@@ -1,8 +1,12 @@
 [package]
 name = "lnrpc"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Edouard Paris <m@edouard.paris>"]
 edition = "2018"
+license = "MIT"
+description = "RPC bindings for github.com/lightningnetwork/lnd"
+readme = "README.md"
+repository = "https://github.com/edouardparis/lnrpc.git"
 
 [dependencies]
 bytes = "0.5.4"
