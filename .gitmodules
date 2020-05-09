@@ -1,3 +1,6 @@
 [submodule "lnd"]
 	path = lnd
 	url = https://github.com/lightningnetwork/lnd
+[submodule "grpc-gateway"]
+	path = grpc-gateway
+	url = https://github.com/grpc-ecosystem/grpc-gateway

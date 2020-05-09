@@ -1,9 +1,12 @@
 [package]
-name = "lnd-rs"
+name = "lnrpc"
 version = "0.1.0"
 authors = ["Edouard Paris <m@edouard.paris>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+bytes = "0.5.4"
+prost = "0.6.1"
+
+[build-dependencies]
+prost-build = "0.6.1"
