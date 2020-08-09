@@ -49,6 +49,9 @@ pub mod mock {
     use webpki::DNSNameRef;
     pub struct MockVerifier;
 
+    /// MockVerifier is a rustls::ServerCertVerified which does not verify the certificate.
+    /// Sadly a self signed certificate is rejected with WebPKIError (CAUsedAsEndEntity),
+    /// see https://github.com/briansmith/webpki/issues/114 .
     impl ServerCertVerifier for MockVerifier {
         fn verify_server_cert(
             &self,

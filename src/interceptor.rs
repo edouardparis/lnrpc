@@ -1,6 +1,8 @@
 use hex;
 use tonic::{Request, Status};
 
+/// macaroon returns an interceptor which inserts
+/// the lnd macaroon in the request metadata.
 pub fn macaroon(mac: &[u8]) -> tonic::Interceptor {
     let hex_mac = hex::encode(mac);
     let f = move |r: Request<()>| -> Result<Request<()>, Status> {
